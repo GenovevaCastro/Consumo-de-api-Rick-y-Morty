@@ -1,0 +1,39 @@
+body{
+    justify-content: center;
+    text-align: center;
+    background: url(fondo\ rick\ y\ morty.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    margin: 0%;
+  }
+#logo{
+   margin: 50px;
+}
+
+main{
+  margin: 50px;
+  display: flex;
+  text-align: left;
+  justify-content: left;
+}
+
+#portal{
+  width: 1000px;
+  float: left;
+}
+
+p{
+  font-size: 40px;
+  color: white;
+  width: 800px;
+  align-content: left;
+  text-align: center;
+}
+
+table{
+  float:center;
+  height: auto;
+  align-content: center;
+  margin:0
+}
+
