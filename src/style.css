@@ -1,39 +1,63 @@
 body{
     justify-content: center;
     text-align: center;
-    background: url(fondo\ rick\ y\ morty.jpg);
+    background: url(fondo\ 2.jpg);
     background-repeat:no-repeat;
     background-size: cover;
-    margin: 0%;
+    overflow-x:hidden;
+    padding: 10px;
   }
 #logo{
-   margin: 50px;
+   margin: 0 0 0 0px;
+   width: 800px;
 }
-
+nav li{
+  display: inline;
+  padding-inline: 0px;
+  margin: 0 0 0 0;
+}
+#caja{
+  margin: 0 0 0 0px;
+  justify-content: center;
+  align-items: center;
+}
+#btnInicio{
+  width: 150px;
+  margin: 0 50px 0 0px;
+}
 main{
-  margin: 50px;
+  margin: 0 0 0 50px;
+}
+.tabla{
+  align-items: center;
+  background-size: cover;
   display: flex;
-  text-align: left;
-  justify-content: left;
 }
-
 #portal{
-  width: 1000px;
-  float: left;
+  width: 750px;
+  padding:0%;
+  margin: 0% auto;
 }
-
 p{
-  font-size: 40px;
+  font-size: 30px;
   color: white;
-  width: 800px;
   align-content: left;
   text-align: center;
+  padding:0%;
+  font-family: RickMorty1;
+  background-color: rgba(172, 255, 47, 0.037);
+  height: 0%;
+  width: 500px;
+  border-radius: 10px;
+  padding: 15px;
+  align-items: center;
+  margin: 0% auto;
+}
+@font-face{
+  font-family: RickMorty1;
+  src:url(letraSinopsis.TTF);
 }
 
-table{
-  float:center;
-  height: auto;
-  align-content: center;
-  margin:0
-}
+
+
 
