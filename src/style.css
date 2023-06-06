@@ -1,61 +1,61 @@
 body{
-    justify-content: center;
-    text-align: center;
-    background: url(fondo\ 2.jpg);
-    background-repeat:no-repeat;
-    background-size: cover;
-    overflow-x:hidden;
-    padding: 10px;
-  }
+  justify-content: center;
+  text-align: center;
+  background: url(fondo\ 2.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  overflow-x:hidden;
+  padding: 10px;
+}
 #logo{
-   margin: 0 0 0 0px;
-   width: 800px;
+ margin: 0 0 0 0px;
+ width: 800px;
 }
 nav li{
-  display: inline;
-  padding-inline: 0px;
-  margin: 0 0 0 0;
+display: inline;
+padding-inline: 0px;
+margin: 0 0 0 0;
 }
 #caja{
-  margin: 0 0 0 0px;
-  justify-content: center;
-  align-items: center;
+margin: 0 0 0 0px;
+justify-content: center;
+align-items: center;
 }
 #btnInicio{
-  width: 150px;
-  margin: 0 50px 0 0px;
+width: 150px;
+margin: 0 50px 0 0px;
 }
 main{
-  margin: 0 0 0 50px;
+margin: 0 0 0 50px;
 }
 .tabla{
-  align-items: center;
-  background-size: cover;
-  display: flex;
+align-items: center;
+background-size: cover;
+display: flex;
 }
 #portal{
-  width: 750px;
-  padding:0%;
-  margin: 0% auto;
+width: 750px;
+padding:0%;
+margin: 0% auto;
 }
 p{
-  font-size: 30px;
-  color: white;
-  align-content: left;
-  text-align: center;
-  padding:0%;
-  font-family: RickMorty1;
-  background-color: rgba(172, 255, 47, 0.037);
-  height: 0%;
-  width: 500px;
-  border-radius: 10px;
-  padding: 15px;
-  align-items: center;
-  margin: 0% auto;
+font-size: 30px;
+color: white;
+align-content: left;
+text-align: center;
+padding:0%;
+font-family: RickMorty1;
+background-color: rgba(172, 255, 47, 0.037);
+height: 0%;
+width: 500px;
+border-radius: 10px;
+padding: 15px;
+align-items: center;
+margin: 0% auto;
 }
 @font-face{
-  font-family: RickMorty1;
-  src:url(letraSinopsis.TTF);
+font-family: RickMorty1;
+src:url(letraSinopsis.TTF);
 }
 
 
