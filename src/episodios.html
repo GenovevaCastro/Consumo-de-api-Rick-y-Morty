@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="imagenes/icono .png"/>
+    <meta charset="utf-8">
+    <title>Episodios</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width", initial-scale="1" maximum-scale="1" />
+  </head>
+  <body id="bodyEpisodios">
+  <header>
+      <h1><img src="imagenes/logo.png" id="logo"></h1>
+      <div id="caja">
+    <nav>
+      <ul>
+        <li><a href="index.html">
+            <img src="imagenes/boton inicio.png" id="btnInicio">
+        </a></li>
+        <li><a href="personajes.html">
+            <img src="imagenes/botonPersonajes.png" id="btnPersonajes">
+        </a></li>
+        <li><a href="episodios.html">
+            <img src="imagenes/botonEpisodios.png" id="btnEpisodios">
+        </a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="contenedorEpisodios">
+    <table class="tablaEpisodios">
+        <thead>
+            <tr>
+                <th>Episodios</th>
+            </tr>
+        </thead>
+        <tbody id="dataEpisodios">
+        </tbody>
+    </table>
+  </div>
+
+  <footer> <img src="imagenes/gif footer.gif" id="img_footer"  /> <p id="textofooter" src>genoveva </p>
+  </footer >
+  <script>
+    function clickEpisodio(url){
+      document.getElementById("infoFlotante").style.display="block";
+      //abrir pantalla flotante
+        fetch(url)
+        //consume la url del episodio
+        .then(response => response.json())
+        //promete que devuelve algo del json
+        .then(data => {
+            console.log(data)
+            document.getElementById('tituloCapitulo').innerHTML=data.name
+            document.getElementById('fechaCapitulo').innerHTML=data.air_date
+            //document.getElementById('characters').innerHTML=data.characters
+            //la respuesta la muestra en el div infoFlotante
+        });
+    }
+  </script>
+    <div id="root"></div>
+    <script src="episodios.js" type="module"></script>
+
+    
+    <div id="infoFlotante">
+      <img id="cerrar" src="imagenes/cerrar.png">
+        <p id="tituloCapitulo">
+        </p>
+        <p id="fechaCapitulo">
+        </p>  
+        <p id="characters">
+        </p>
+    
+    </div>
+
+
+  </body>
+</html>

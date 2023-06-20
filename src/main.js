@@ -1,6 +1,7 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+//aqui van los eventos del DOOM
+import { obtenerData } from './data.js';
+//aqui ya trajo la data con la funcion de data
+const resultado= obtenerData();
+//se crea la constante de resultado donde se guarda todo lo que se obtuvo de la funcion
+//console.log(resultado);
 
-console.log(example, data);

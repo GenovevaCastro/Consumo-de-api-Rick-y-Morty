@@ -5,10 +5,9 @@
     <meta charset="utf-8">
     <title>Personajes</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="widh=device-width", initial-scale="1" maximum-scale="1" />
+    <meta name="viewport" content="width=device-width", initial-scale="1" maximum-scale="1" />
   </head>
-  
-<body>
+  <body id="bodyPersonajes" onclick="play()">
   <header>
       <h1><img src="imagenes/logo.png" id="logo"></h1>
       <div id="caja">
@@ -18,16 +17,37 @@
             <img src="imagenes/boton inicio.png" id="btnInicio">
         </a></li>
         <li><a href="personajes.html">
-            <img src="imagenes/botonPersonajes.png" id="btnPersonajes">
-        </a></li>
+          <img src="imagenes/botonPersonajes.png" id="btnPersonajes">
+      </a></li>
+        <li><a href="episodios.html">
+          <img src="imagenes/botonEpisodios.png" id="btnEpisodios">
+      </a></li>
       </ul>
     </nav>
+  </header>
+  <div id="contenedorTodosLosPersonajes">
+  <div id="divPersonajeHtml">
+  </div>
+  </div>
+    
      
-
-    <!--<footer> <img src="imagenes/gif footer.gif" id="img_footer"  /> <p id="textofooter" src>genoveva / Miriam </p>
-    </footer >-->
-
+  
+    <footer>
+      <img src="imagenes/gif footer.gif" id="img_footer"  />
+      <br>
+      <p id="textofooter" src>
+        Created By Genoveva C.
+      </p>
+    </footer >
+  <!-- <audio  id="musica">
+      <source src="soy pepinillo rick.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+      function play(){
+        document.getElementById("musica").play();
+      }
+    </script> -->
       <div id="root"></div>
-      <script src="main.js" type="module"></script>
+      <script src="personajes.js" type="module"></script>
     </body>
   </html>

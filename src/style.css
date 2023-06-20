@@ -13,11 +13,24 @@ body{
   text-align: center;
   background: url(imagenes/fondo\ rick\ y\ morty.jpg);
   background-repeat:no-repeat;
+  padding: 10px;
   background-size: cover;
-  overflow-x:hidden;
-  padding: 0px;
+  padding: 10px;
 }
-
+#bodyPersonajes{
+  justify-content: center;
+  text-align: center;
+  background: url(imagenes/fondo\ rick\ y\ morty.jpg);
+  background-repeat:repeat-y;
+  background-size:contain;
+}
+#bodyEpisodios{
+  justify-content: center;
+  text-align: center;
+  background: url(imagenes/fondo\ rick\ y\ morty.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
+}
 header{
   padding: 20px;
 }
@@ -25,25 +38,35 @@ header{
  margin: 0 0 0 0px;
  width: 800px;
 }
+@font-face{
+  font-family: RickMorty1;
+  src:url(letraSinopsis.TTF);
+  }
+  @font-face {
+    font-family:letrarick;
+    src:url(letrarick.ttf);
+  }
+
+/*------------------navegador-------------*/
 nav li{
 display: inline;
 padding-inline: 0px;
 margin: 0 0 0 0;
 }
-#caja{
-margin: 0 0 0 0px;
-justify-content: center;
-align-items: center;
-}
 #btnInicio{
 width: 150px;
 margin: 0 50px 0 0px;
 }
-
 #btnPersonajes{
   width: 150px;
   margin: 0 50px 0 0px;
   }
+  #btnEpisodios{
+    width: 150px;
+    margin: 0 50px 0 0px;
+    }
+
+/*----------------------tabla inicio imagen sinopsis------------------*/
 main{
 margin: 0 0 0 50px;
 }
@@ -71,34 +94,126 @@ padding: 15px;
 align-items: center;
 margin: 0% auto;
 }
-@font-face{
-font-family: RickMorty1;
-src:url(letraSinopsis.TTF);
-}
-@font-face {
-  font-family:letrarick;
-  src:url(letrarick.ttf);
 
+  /*----------------------personajes------------------*/
+  #contenedorTodosLosPersonajes{
+    margin: 0px, 10px, 0, 10px;
+  }
+  /*cajita de personaje*/
+  .divPersonajeJs{
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 5px;
+    border-style:groove;
+    border-width: 14px;
+    box-sizing: border-box;
+    border-color: aqua;
+    /*este display sirvio para centrar el cuadro i la info de dentro*/
+    display:-webkit-inline-box;
+    align-items:center;
+  }
+  .imagenPersonajeJs{
+    width: 180px;
+    border-radius: 200px;
+    box-shadow: 0 0 4rem rgba(0, 255, 255, 0.936);
+    align-content: center;
+    margin: 15px;
+  }
+  .nombrePersonajeJs{
+    font-size: 25px;
+    color: rgb(0, 255, 26);
+    font-family: letrarick;
+    text-shadow: 3px 3px 3px rgba(0, 255, 255, 0.73);
+    align-content: center;
+    display: inline-block;
+  }
+  #identificacionPersonajes{
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    text-align: left;
+    border-style: inset;
+    border-width: 10px;
+    box-sizing: border-box;
+    border-color: aqua;
 }
 
+  /*----------------------episodios------------------*/
+  .tablaEpisodios{
+    background: white;
+    margin: 0%;
+    align:center;
+  }
+  #infoFlotante{
+    background-color:whitesmoke;
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    padding: 25px;
+    position: absolute;
+    top: 35px;
+    display: none;
+  }
+  #cerrar{
+    width: 20px;
+    height: 20px;
+    background: url(imagenes/x.png);
+  }
+  #pantallaInfoEpisodios{
+    background-color: grey;
+    width: 200px;
+    height: 200px;
+    text-align: left;
+    border-style: inset;
+    border-width: 10px;
+    box-sizing: border-box;
+    border-color: aqua;
+  }
+
+    /*----------------------planetas------------------*/
+#imagenPlanetas{
+  width: 300px;
+  height: auto;
+}
+#contenedorPlaneta{
+  background-color: hotpink;
+  width: 400px;
+  border-style: inset;
+  border-width: 10px;
+  box-sizing: border-box;
+  border-color: aqua;
+}
+
+
+/*----------------------footer------------------*/
 footer{
-  background-color:rgba(53, 88, 48, 0.438);
+  background-color:rgba(0, 0, 0, 0.441);
   text-align: center;
-  padding: 3px;
-  
+  padding: 10px;
+
  
 }
 #textofooter{
   font-family:letrarick;
-  font-size: 14px;
+  font-size: 20px;
   text-align: center;
-  margin: 0px;
-  color:whitesmoke;
-  
+  margin: 10px;
+  color:white;
+  text-shadow: 3px 3px 3px rgba(0, 255, 255, 0.73);
 }
-
 #img_footer{
   border-radius: 70px;
   width: 35px;
   align-items: center;
   }
+
+
+
+
+
+
+
+
+  
