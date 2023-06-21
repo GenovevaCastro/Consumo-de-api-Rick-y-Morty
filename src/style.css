@@ -29,7 +29,7 @@ body{
   text-align: center;
   background: url(imagenes/fondo\ rick\ y\ morty.jpg);
   background-repeat:no-repeat;
-  background-size: cover;
+  background-size:100%;
 }
 header{
   padding: 20px;
@@ -74,6 +74,7 @@ margin: 0 0 0 50px;
 align-items: center;
 background-size: cover;
 display: flex;
+margin: 5px;
 }
 #portal{
 width: 750px;
@@ -81,18 +82,23 @@ padding: 0%;
 margin: 0% auto;
 }
 #sinopsis{
-font-size: 30px;
+font-size: 27px;
 color: white;
 align-content: left;
 text-align: center;
 font-family: RickMorty1;
-background-color:rgba(53, 88, 48, 0.438);
 height: 0%;
 width: 500px;
-border-radius: 10px;
-padding: 15px;
+padding: 5px;
 align-items: center;
-margin: 0% auto;
+margin: 5px;
+background-color: black;
+border-radius: 5px;
+border-style:groove;
+border-width: 14px;
+box-sizing: border-box;
+border-color: aqua;
+line-height: 35px;
 }
 
   /*----------------------personajes------------------*/
@@ -139,59 +145,89 @@ margin: 0% auto;
     box-sizing: border-box;
     border-color: aqua;
 }
+#tablaInfopersonajes{
+  background-color: aliceblue;
+  text-align: left;
+  align-items:center;
+  line-height: 40px;
+  display: grid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-inline: 300px;
+  border-spacing: 5px;
+  
+}
 
   /*----------------------episodios------------------*/
+  .contenedorEpisodios{
+    display: block;
+    margin: 2%;
+    align-content: center;
+  }
+  .episodiosTitulo{
+    font-size: 50px;
+    color: rgb(0, 255, 26);
+    font-family: letrarick;
+    text-shadow: 5px 5px 5px rgba(0, 255, 255, 0.73);
+    align-content: center;
+    padding: 20px;
+  }
   .tablaEpisodios{
-    background: white;
-    margin: 0%;
-    align:center;
-  }
-  #infoFlotante{
-    background-color:whitesmoke;
-    border-radius: 20px;
-    width: 300px;
-    height: 300px;
-    padding: 25px;
-    position: absolute;
-    top: 35px;
-    display: none;
-  }
-  #cerrar{
-    width: 20px;
-    height: 20px;
-    background: url(imagenes/x.png);
-  }
-  #pantallaInfoEpisodios{
-    background-color: grey;
-    width: 200px;
-    height: 200px;
-    text-align: left;
-    border-style: inset;
-    border-width: 10px;
+    font-family: RickMorty1;
+    font-size: 30px;
+    color: white;
+    display: -webkit-inline-box;
+    background-color: black;
+    border-radius: 5px;
+    border-style:groove;
+    border-width: 14px;
     box-sizing: border-box;
     border-color: aqua;
+    align-items:center;
+    line-height: 40px;
   }
-
-    /*----------------------planetas------------------*/
-#imagenPlanetas{
-  width: 300px;
-  height: auto;
-}
-#contenedorPlaneta{
-  background-color: hotpink;
-  width: 400px;
-  border-style: inset;
-  border-width: 10px;
-  box-sizing: border-box;
-  border-color: aqua;
-}
-
+  #infoFlotante{
+    background-color:rgb(0, 255, 255);
+    border-radius: 20px;
+    padding: 25px;
+    left: 10%;
+    right: 10%;
+    position:fixed;
+    top: 25%;
+    display: none;
+    justify-content: center;
+    text-align: center;
+    font-family: letraRick;
+    font-size: 25px;
+    color: black;
+    line-height: 50px;
+    letter-spacing: 5px;
+    border-radius: 5px;
+    border-style:groove;
+    border-width: 14px;
+    box-sizing: border-box;
+    border-color: rgb(0, 255, 26);
+  }
+  #cerrar{
+    width: 25px;
+    height: 25px;
+    background: url(imagenes/x.png);
+    float: right;
+  }
+  #imagenCerrar{
+    width: 25px;
+    height: 25px;
+    background: url(imagenes/x.png);
+    float: right;
+  }
 
 /*----------------------footer------------------*/
 footer{
   background-color:rgba(0, 0, 0, 0.441);
   text-align: center;
   padding: 10px;
+  position: absolute;
+  width: 100%;
 
  
 }
@@ -208,6 +244,21 @@ footer{
   width: 35px;
   align-items: center;
   }
+
+      /*----------------------planetas------------------*/
+#imagenPlanetas{
+  width: 300px;
+  height: auto;
+}
+#contenedorPlaneta{
+  background-color: hotpink;
+  width: 400px;
+  border-style: inset;
+  border-width: 10px;
+  box-sizing: border-box;
+  border-color: aqua;
+}
+
 
 
 
