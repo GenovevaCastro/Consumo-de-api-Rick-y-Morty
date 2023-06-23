@@ -11,7 +11,7 @@ a:hover{
 body{
   justify-content: center;
   text-align: center;
-  background: url(imagenes/fondo\ rick\ y\ morty.jpg);
+  background: black;
   background-repeat:no-repeat;
   padding: 10px;
   background-size: cover;
@@ -20,14 +20,14 @@ body{
 #bodyPersonajes{
   justify-content: center;
   text-align: center;
-  background: url(imagenes/fondo\ rick\ y\ morty.jpg);
+  background: black;
   background-repeat:repeat-y;
   background-size:contain;
 }
 #bodyEpisodios{
   justify-content: center;
   text-align: center;
-  background: url(imagenes/fondo\ rick\ y\ morty.jpg);
+  background: black;
   background-repeat:no-repeat;
   background-size:100%;
 }
@@ -97,8 +97,9 @@ border-radius: 5px;
 border-style:groove;
 border-width: 14px;
 box-sizing: border-box;
-border-color: aqua;
+border-color: rgb(0, 255, 26);
 line-height: 35px;
+text-shadow: 3px 3px 3px blue;
 }
 
   /*----------------------personajes------------------*/
@@ -115,7 +116,7 @@ line-height: 35px;
     border-style:groove;
     border-width: 14px;
     box-sizing: border-box;
-    border-color: aqua;
+    border-color: rgb(0, 255, 26);
     /*este display sirvio para centrar el cuadro i la info de dentro*/
     display:-webkit-inline-box;
     align-items:center;
@@ -135,27 +136,36 @@ line-height: 35px;
     align-content: center;
     display: inline-block;
   }
-  #identificacionPersonajes{
-    background-color: yellow;
-    width: 200px;
-    height: 200px;
-    text-align: left;
-    border-style: inset;
-    border-width: 10px;
-    box-sizing: border-box;
-    border-color: aqua;
-}
 #tablaInfopersonajes{
-  background-color: aliceblue;
   text-align: left;
   align-items:center;
   line-height: 40px;
   display: grid;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-inline: 300px;
-  border-spacing: 5px;
-  
+  border-spacing: 10px;
+  width:fit-content;
+  height: min-content;
+}
+#divCerrar{
+margin: 5px;
+padding: 20px;
+}
+#imagenCerrar{
+    width: 55px;
+    height: 55px;
+    float: right;
+}
+.tdPropiedad{
+    font-size: 30px;
+    color: rgb(0, 255, 26);
+    
+}
+.tdValor{
+  font-family: RickMorty1;
+    font-size: 30px;
+    color:aqua;
+    text-shadow: 3px 3px 3px blue;
 }
 
   /*----------------------episodios------------------*/
@@ -182,12 +192,13 @@ line-height: 35px;
     border-style:groove;
     border-width: 14px;
     box-sizing: border-box;
-    border-color: aqua;
+    border-color: rgb(0, 255, 26);
     align-items:center;
     line-height: 40px;
+    text-shadow: 3px 3px 3px blue;
   }
   #infoFlotante{
-    background-color:rgb(0, 255, 255);
+    background-color:black;
     border-radius: 20px;
     padding: 25px;
     left: 10%;
@@ -198,15 +209,15 @@ line-height: 35px;
     justify-content: center;
     text-align: center;
     font-family: letraRick;
-    font-size: 25px;
-    color: black;
+    font-size: 30px;
+    color: rgb(0, 255, 26);
     line-height: 50px;
     letter-spacing: 5px;
     border-radius: 5px;
     border-style:groove;
     border-width: 14px;
     box-sizing: border-box;
-    border-color: rgb(0, 255, 26);
+    border-color:aqua;
   }
   #cerrar{
     width: 25px;

@@ -1,10 +1,34 @@
+//-------------------------------variables globales-----------------------------------
+let globalPage = 1;
+let globalPaginasTotales = 0;
+//-----------------------------escuchadores-----------------------------------------
+//se ejecutara la funcion validarSiSeOcultaBotonMasPersonajes y obtenerListaPersonajes al dar click en el btnVerMasPersonajes
+document.getElementById('btnVerMasPersonajes').addEventListener(
+  "click",
+  function () {
+    validarSiSeOcultaBotonMasPersonajes()
+    obtenerListaPersonajes()
+  }
+);
+//-----------------------------funciones--------------------------------------------
+//funcion que valida si se debe ocultar el boton de mas personajes por que llego a su limite
+function validarSiSeOcultaBotonMasPersonajes(){
+  if (globalPage===globalPaginasTotales){
+    document.getElementById("btnVerMasPersonajes").style.display = "none";
+  }
+}
 //funcion que obtiene la lista de personajes desde la url de la api
 function obtenerListaPersonajes() {
-  fetch('https://rickandmortyapi.com/api/character')
+    fetch('https://rickandmortyapi.com/api/character/?page='+globalPage)
     .then(response => response.json())
     //promete que devuelve algo del json
     .then(data => {
+      if(globalPaginasTotales===0){
+        globalPaginasTotales=data.info.page
+      }
       crearListaPersonajes(data.results)
+      globalPage++;
+      console.log(data.results);
     });
 }
 //esta funcion recorre results elemento por elemento y manda a llamar a la funcion crear contenedor personaje html
@@ -41,24 +65,31 @@ function crearContenedorPersonajeHtml(element) {
 }
 //crea un div flotante que muestra la informacion del personaje
 function identificacionFlotante(element) {
+  document.getElementById("idTdDatoName").innerText = element.name;
+  document.getElementById("idTdDatoStatus").innerText = element.status;
+  document.getElementById("idTdSpecies").innerText = element.species;
+  document.getElementById("idTdDatoType").innerText = element.type;
+  document.getElementById("idTdDatoGender").innerText = element.gender;
+  mostrarInfoFlotante();
+}
+function crearIdentificacionPersonaje() {
   const infoFlotante = document.createElement("div");
   infoFlotante.id = "infoFlotante";
 
-  const tablaInfoPersonajes = document.createElement("table");
-  infoFlotante.appendChild(tablaInfoPersonajes);
-  tablaInfoPersonajes.id = "tablaInfopersonajes";
-
-  const trClose = document.createElement("tr");
-  tablaInfoPersonajes.appendChild(trClose);
-  const tdClose = document.createElement("td");
-  trClose.appendChild(tdClose);
+  const close = document.createElement("div");
+  close.id = "divCerrar";
+  infoFlotante.appendChild(close);
   const imagenCerrar = document.createElement("img");
   imagenCerrar.id = "imagenCerrar";
   imagenCerrar.src = "imagenes/cerrar.png";
   imagenCerrar.onclick = function () {
     cerrarInfoFlotante();
   };
-  tdClose.appendChild(imagenCerrar);
+  close.appendChild(imagenCerrar);
+
+  const tablaInfoPersonajes = document.createElement("table");
+  infoFlotante.appendChild(tablaInfoPersonajes);
+  tablaInfoPersonajes.id = "tablaInfopersonajes";
 
   const trNombre = document.createElement("tr");
   tablaInfoPersonajes.appendChild(trNombre);
@@ -69,7 +100,7 @@ function identificacionFlotante(element) {
   const tdDatoName = document.createElement("td");
   trNombre.appendChild(tdDatoName);
   tdDatoName.className = "tdValor";
-  tdDatoName.innerText = element.name;
+  tdDatoName.id = "idTdDatoName";
 
   const trStatus = document.createElement("tr");
   tablaInfoPersonajes.appendChild(trStatus);
@@ -80,7 +111,7 @@ function identificacionFlotante(element) {
   const tdDatoStatus = document.createElement("td");
   trStatus.appendChild(tdDatoStatus);
   tdDatoStatus.className = "tdValor";
-  tdDatoStatus.innerText = element.status;
+  tdDatoStatus.id = "idTdDatoStatus";
 
   const trSpecies = document.createElement("tr");
   tablaInfoPersonajes.appendChild(trSpecies);
@@ -91,8 +122,8 @@ function identificacionFlotante(element) {
   const tdDatoSpecies = document.createElement("td");
   trSpecies.appendChild(tdDatoSpecies);
   tdDatoSpecies.className = "tdValor";
-  tdDatoSpecies.innerText = element.species;
-
+  tdDatoSpecies.id = "idTdSpecies";
+ 
   const trType = document.createElement("tr");
   tablaInfoPersonajes.appendChild(trType);
   const tdType = document.createElement("td");
@@ -102,8 +133,8 @@ function identificacionFlotante(element) {
   const tdDatoType = document.createElement("td");
   trType.appendChild(tdDatoType);
   tdDatoType.className = "tdValor";
-  tdDatoType.innerText = element.type;
-
+  tdDatoType.id = "idTdDatoType";
+ 
   const trGender = document.createElement("tr");
   tablaInfoPersonajes.appendChild(trGender);
   const tdGender = document.createElement("td");
@@ -113,10 +144,12 @@ function identificacionFlotante(element) {
   const tdDatoGender = document.createElement("td");
   trGender.appendChild(tdDatoGender);
   tdDatoGender.className = "tdValor";
-  tdDatoGender.innerText = element.gender;
-
-  //------------
+  tdDatoGender.id = "idTdDatoGender";
+ 
   document.getElementById("bodyPersonajes").appendChild(infoFlotante);
+}
+
+function mostrarInfoFlotante(){
   //en esta linea se encarga de mostrar la pantalla flotante ya que en css esta oculto para que aparezca solo al dar click
   document.getElementById("infoFlotante").style.display = "block";
 }
@@ -124,6 +157,10 @@ function identificacionFlotante(element) {
 function cerrarInfoFlotante() {
   document.getElementById("infoFlotante").style.display = "none";
 }
+
+//---------------------funciones que ejecutan al este JS---------------------------
 //esta funcion se ejecuta desde que entramos a la pagina de personajes y es la que manda a llamar a la funcion obtenerListaPersonajes
 obtenerListaPersonajes();
+crearIdentificacionPersonaje()
+
 

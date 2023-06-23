@@ -6,3 +6,6 @@ export function obtenerData() {
   return data.results
   //esta funcion me obtiene la data de resultados de la data  rickymorty y con esta se manda a llamar en main
 };
+
+
+//filtrar, ordenar, calcular
