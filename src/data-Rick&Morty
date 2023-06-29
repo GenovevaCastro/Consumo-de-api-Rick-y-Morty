@@ -46,7 +46,6 @@
       </div>
     </div>
   </main>
-
   <footer> <img src="imagenes/rick bailando.gif" id="img_footer" />
     <p id="textofooter" src> Created by Genoveva C.</p>
   </footer>
