@@ -1,11 +1,9 @@
 * {
   margin: 0px;
 }
-
 html {
   cursor: url(imagenes/pepinillo.cur), auto;
 }
-
 a:hover {
   cursor: url(imagenes/Portal.cur), auto;
 }
@@ -99,7 +97,6 @@ main {
   border-style: groove;
   border-width: 10px;
 }
-
 #sinopsis {
   font-size: 27px;
   color: white;

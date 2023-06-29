@@ -18,6 +18,7 @@ function validarSiSeOcultaBotonMasPersonajes() {
   }
 };
 
+
 function obtenerListaEpisodios() {
   fetch('https://rickandmortyapi.com/api/episode?page=' + globalPage)
     .then(response => response.json())
