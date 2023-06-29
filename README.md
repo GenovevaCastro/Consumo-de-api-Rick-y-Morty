@@ -72,7 +72,7 @@ En este proyecto NO se usan librerías o frameworks, solo JavaScript puro tambi�
  * Fondo: Negro.
  * Opacidades: 3px 3px 3px rgba(0, 255, 255, 0.73);  rgba(0, 255, 26, 0.098)
  * Paleta:  white -  aqua - black - rgb(0, 255, 26) - blue - rgba(0, 255, 26, 0.098)
- ```
+
 
 ![Gráfica paleta de colores](<https://github.com/GenovevaCastro/DEV008-card-validation-veva/blob/main/src/Paleta%20de%20clores.jpg?raw=true>)
 
