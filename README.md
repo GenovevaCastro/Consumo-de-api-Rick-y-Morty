@@ -57,7 +57,7 @@ En este proyecto NO se usan librerías o frameworks, solo JavaScript puro tambi�
 
 * Prototipo de baja fidelidad: La aplicación web se basa en el desplazamiento de la información que contendrá esta misma, además de los elementos que la componen.
 
-![Prototipo de baja]([(https://raw.githubusercontent.com/GenovevaCastro/DEV008-data-lovers/b70d83f957dcb8e0957787c8f7e069a55a783651/src/prototipobaja.jpeg))
+![Prototipo de baja]([(src/prototipobaja.jpeg))
 
 * Prototipo de alta fidelidad:
 
