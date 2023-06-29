@@ -1,55 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="icon" href="imagenes/icono .png"/>
-    <meta charset="utf-8">
-    <title>Personajes</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width", initial-scale="1" maximum-scale="1" />
-  </head>
-  <body id="bodyPersonajes" onclick="play()">
+
+<head>
+  <link rel="icon" href="imagenes/icono .png" />
+  <meta charset="utf-8">
+  <title>Personajes</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width" , initial-scale="1" maximum-scale="1" />
+</head>
+
+<body id="bodyPersonajes">
   <header>
-      <h1><img src="imagenes/logo.png" id="logo"></h1>
-      <div id="caja">
-    <nav>
-      <ul>
-        <li><a href="index.html">
-            <img src="imagenes/boton inicio.png" id="btnInicio">
-        </a></li>
-        <li><a href="personajes.html">
-          <img src="imagenes/botonPersonajes.png" id="btnPersonajes">
-      </a></li>
-        <li><a href="episodios.html">
-          <img src="imagenes/botonEpisodios.png" id="btnEpisodios">
-      </a></li>
-      </ul>
-    </nav>
+    <h1><img src="imagenes/logo.png" id="logo"></h1>
+    <div id="caja">
+      <nav>
+        <ul>
+          <li><a href="index.html">
+              <img src="imagenes/boton inicio.png" id="btnInicio">
+            </a></li>
+          <li><a href="personajes.html">
+              <img src="imagenes/botonPersonajes.png" id="btnPersonajes">
+            </a></li>
+          <li><a href="episodios.html">
+              <img src="imagenes/botonEpisodios.png" id="btnEpisodios">
+            </a></li>
+        </ul>
+      </nav>
   </header>
 
+  <div>
 
-  <div id="contenedorTodosLosPersonajes">
-  <div id="divPersonajeHtml">
-  </div>
-  <button type="button" id="btnVerMasPersonajes">Ver mas personajes</button>
-  </div>
-    
-  
+
+    <form action="" id="formulario" name="formulario">
+      <! ––«para indicar que se va a recibir informacion del usuario«––>
+        <br>
+        <input style="font-family: RickMorty1; font-size: 20px;text-align: center" ; type="text"
+          name="nombreDelPersonaje" id="nombreDelPersonaje" minlength="5" placeholder="Nombre de personaje" required />
+
+
+        <center><button type="button" id="botonBuscar" text-align:center;">
+            Buscar
+          </button></center>
+    </form>
+
+
+    <div id="contenedorTodosLosPersonajes">
+      <div id="divPersonajeHtml">
+      </div>x
+      <button type="button" id="btnVerMasPersonajes">Ver mas personajes</button>
+    </div>
+
+
+
+
     <footer>
-      <img src="imagenes/gif footer.gif" id="img_footer"  />
+      <img src="imagenes/rick bailando.gif" id="img_footer" />
       <br>
       <p id="textofooter" src>
         Created By Genoveva C.
       </p>
-    </footer >
-  <!-- <audio  id="musica">
-      <source src="soy pepinillo rick.mp3" type="audio/mpeg">
-    </audio>
-    <script>
-      function play(){
-        document.getElementById("musica").play();
-      }
-    </script> -->
-      <div id="root"></div>
-      <script src="personajes.js" type="module"></script>
-    </body>
-  </html>
+    </footer>
+
+    <div id="root"></div>
+    <script src="personajes.js" type="module"></script>
+</body>
+
+</html>

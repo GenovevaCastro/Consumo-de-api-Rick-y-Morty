@@ -1,281 +1,352 @@
-*{
+* {
   margin: 0px;
 }
-html{
-  cursor:url(imagenes/pepinillo.cur), auto;
+
+html {
+  cursor: url(imagenes/pepinillo.cur), auto;
 }
 
-a:hover{
-  cursor:url(imagenes/Portal.cur),auto;
+a:hover {
+  cursor: url(imagenes/Portal.cur), auto;
 }
-body{
+body {
   justify-content: center;
   text-align: center;
   background: black;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   padding: 10px;
   background-size: cover;
   padding: 10px;
 }
-#bodyPersonajes{
+#bodyPersonajes {
   justify-content: center;
   text-align: center;
   background: black;
-  background-repeat:repeat-y;
-  background-size:contain;
+  background-repeat: repeat-y;
+  background-size: contain;
+  overflow-x: hidden;
 }
-#bodyEpisodios{
+#bodyEpisodios {
   justify-content: center;
   text-align: center;
   background: black;
-  background-repeat:no-repeat;
-  background-size:100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow-x: hidden;
 }
-header{
+header {
   padding: 20px;
 }
-#logo{
- margin: 0 0 0 0px;
- width: 800px;
+#logo {
+  width: 50%;
+  margin: 10px;
 }
-@font-face{
+@font-face {
   font-family: RickMorty1;
-  src:url(letraSinopsis.TTF);
-  }
-  @font-face {
-    font-family:letrarick;
-    src:url(letrarick.ttf);
-  }
+  src: url(letraSinopsis.TTF);
+}
+@font-face {
+  font-family: letrarick;
+  src: url(letrarick.ttf);
+}
 
 /*------------------navegador-------------*/
-nav li{
-display: inline;
-padding-inline: 0px;
-margin: 0 0 0 0;
+nav li {
+  display: inline;
+  padding-inline: 0px;
+  margin: 0 0 0 0;
 }
-#btnInicio{
-width: 150px;
-margin: 0 50px 0 0px;
-}
-#btnPersonajes{
+#btnInicio {
   width: 150px;
   margin: 0 50px 0 0px;
-  }
-  #btnEpisodios{
-    width: 150px;
-    margin: 0 50px 0 0px;
-    }
+}
+#btnPersonajes {
+  width: 150px;
+  margin: 0 50px 0 0px;
+}
+#btnEpisodios {
+  width: 150px;
+  margin: 0 50px 0 0px;
+}
 
 /*----------------------tabla inicio imagen sinopsis------------------*/
-main{
-margin: 0 0 0 50px;
+main {
+  margin: 0 0 0 5px;
 }
-.tabla{
-align-items: center;
-background-size: cover;
-display: flex;
-margin: 5px;
+.tabla {
+  align-items: center;
+  margin: 5px;
+  text-align: center;
+  position: center;
+  display: block;
 }
-#portal{
-width: 750px;
-padding: 0%;
-margin: 0% auto;
+#divImagenPortal {
+  text-align: center;
+  position: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
 }
-#sinopsis{
-font-size: 27px;
-color: white;
-align-content: left;
-text-align: center;
-font-family: RickMorty1;
-height: 0%;
-width: 500px;
-padding: 5px;
-align-items: center;
-margin: 5px;
-background-color: black;
-border-radius: 5px;
-border-style:groove;
-border-width: 14px;
-box-sizing: border-box;
-border-color: rgb(0, 255, 26);
-line-height: 35px;
-text-shadow: 3px 3px 3px blue;
+#portal {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  position: center;
+  display: block;
+  justify-content: space-around;
+  border-radius: 10px;
+  border-color: aqua;
+  border-style: groove;
+  border-width: 10px;
 }
 
-  /*----------------------personajes------------------*/
-  #contenedorTodosLosPersonajes{
-    margin: 0px, 10px, 0, 10px;
-  }
-  /*cajita de personaje*/
-  .divPersonajeJs{
-    background-color: black;
-    width: 300px;
-    height: 300px;
-    margin: 20px;
-    border-radius: 5px;
-    border-style:groove;
-    border-width: 14px;
-    box-sizing: border-box;
-    border-color: rgb(0, 255, 26);
-    /*este display sirvio para centrar el cuadro i la info de dentro*/
-    display:-webkit-inline-box;
-    align-items:center;
-  }
-  .imagenPersonajeJs{
-    width: 180px;
-    border-radius: 200px;
-    box-shadow: 0 0 4rem rgba(0, 255, 255, 0.936);
-    align-content: center;
-    margin: 15px;
-  }
-  .nombrePersonajeJs{
-    font-size: 25px;
-    color: rgb(0, 255, 26);
-    font-family: letrarick;
-    text-shadow: 3px 3px 3px rgba(0, 255, 255, 0.73);
-    align-content: center;
-    display: inline-block;
-  }
-#tablaInfopersonajes{
+#sinopsis {
+  font-size: 27px;
+  color: white;
+  text-align: center;
+  font-family: RickMorty1;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  margin: 5px;
+  background-color: black;
+  border-radius: 5px;
+  border-style: groove;
+  border-width: 10px;
+  box-sizing: border-box;
+  border-color: rgb(0, 255, 26);
+  line-height: 35px;
+  text-shadow: 3px 3px 3px blue;
+  word-spacing: 5px;
+}
+/*----------------------personajes------------------*/
+#contenedorTodosLosPersonajes {
+  margin: 0px, 10px, 0, 10px;
+}
+/*cajita de personaje*/
+.divPersonajeJs {
+  background-color: black;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  border-radius: 5px;
+  border-style: groove;
+  border-width: 14px;
+  box-sizing: border-box;
+  border-color: rgb(0, 255, 26);
+  /*este display sirvio para centrar el cuadro i la info de dentro*/
+  display: -webkit-inline-box;
+  align-items: center;
+}
+.imagenPersonajeJs {
+  width: 180px;
+  border-radius: 200px;
+  box-shadow: 0 0 4rem rgb(0, 255, 255);
+  align-content: center;
+  margin: 15px;
+}
+.nombrePersonajeJs {
+  font-size: 25px;
+  color: rgb(0, 255, 26);
+  font-family: letrarick;
+  text-shadow: 3px 3px 3px rgba(0, 255, 255, 0.73);
+  align-content: center;
+  display: inline-block;
+}
+#tablaInfopersonajes {
   text-align: left;
-  align-items:center;
+  align-items: center;
   line-height: 40px;
   display: grid;
   padding-top: 10px;
   padding-bottom: 10px;
   border-spacing: 10px;
-  width:fit-content;
+  width: fit-content;
   height: min-content;
 }
-#divCerrar{
-margin: 5px;
-padding: 20px;
+#divCerrar {
+  margin: 5px;
+  padding: 20px;
 }
-#imagenCerrar{
-    width: 55px;
-    height: 55px;
-    float: right;
+
+#imagenCerrar {
+  width: 55px;
+  height: 55px;
+  float: right;
 }
-.tdPropiedad{
-    font-size: 30px;
-    color: rgb(0, 255, 26);
-    
+.tdPropiedad {
+  font-size: 30px;
+  color: rgb(0, 255, 26);
 }
-.tdValor{
+.tdValor {
   font-family: RickMorty1;
-    font-size: 30px;
-    color:aqua;
-    text-shadow: 3px 3px 3px blue;
+  font-size: 30px;
+  color: aqua;
+  text-shadow: 3px 3px 3px blue;
 }
-
-  /*----------------------episodios------------------*/
-  .contenedorEpisodios{
-    display: block;
-    margin: 2%;
-    align-content: center;
-  }
-  .episodiosTitulo{
-    font-size: 50px;
-    color: rgb(0, 255, 26);
-    font-family: letrarick;
-    text-shadow: 5px 5px 5px rgba(0, 255, 255, 0.73);
-    align-content: center;
-    padding: 20px;
-  }
-  .tablaEpisodios{
-    font-family: RickMorty1;
-    font-size: 30px;
-    color: white;
-    display: -webkit-inline-box;
-    background-color: black;
-    border-radius: 5px;
-    border-style:groove;
-    border-width: 14px;
-    box-sizing: border-box;
-    border-color: rgb(0, 255, 26);
-    align-items:center;
-    line-height: 40px;
-    text-shadow: 3px 3px 3px blue;
-  }
-  #infoFlotante{
-    background-color:black;
-    border-radius: 20px;
-    padding: 25px;
-    left: 10%;
-    right: 10%;
-    position:fixed;
-    top: 25%;
-    display: none;
-    justify-content: center;
-    text-align: center;
-    font-family: letraRick;
-    font-size: 30px;
-    color: rgb(0, 255, 26);
-    line-height: 50px;
-    letter-spacing: 5px;
-    border-radius: 5px;
-    border-style:groove;
-    border-width: 14px;
-    box-sizing: border-box;
-    border-color:aqua;
-  }
-  #cerrar{
-    width: 25px;
-    height: 25px;
-    background: url(imagenes/x.png);
-    float: right;
-  }
-  #imagenCerrar{
-    width: 25px;
-    height: 25px;
-    background: url(imagenes/x.png);
-    float: right;
-  }
-
-/*----------------------footer------------------*/
-footer{
-  background-color:rgba(0, 0, 0, 0.441);
+#infoFlotante {
+  background-color: black;
+  border-radius: 20px;
+  padding: 25px;
+  left: 10%;
+  right: 10%;
+  position: fixed;
+  top: 25%;
+  display: none;
+  justify-content: center;
   text-align: center;
-  padding: 10px;
-  position: absolute;
-  width: 100%;
-
- 
-}
-#textofooter{
-  font-family:letrarick;
-  font-size: 20px;
-  text-align: center;
-  margin: 10px;
-  color:white;
-  text-shadow: 3px 3px 3px rgba(0, 255, 255, 0.73);
-}
-#img_footer{
-  border-radius: 70px;
-  width: 35px;
-  align-items: center;
-  }
-
-      /*----------------------planetas------------------*/
-#imagenPlanetas{
-  width: 300px;
-  height: auto;
-}
-#contenedorPlaneta{
-  background-color: hotpink;
-  width: 400px;
-  border-style: inset;
-  border-width: 10px;
+  font-family: letraRick;
+  font-size: 30px;
+  color: rgb(0, 255, 26);
+  line-height: 50px;
+  letter-spacing: 5px;
+  border-radius: 5px;
+  border-style: groove;
+  border-width: 14px;
   box-sizing: border-box;
   border-color: aqua;
 }
+#imagenCerrar {
+  width: 25px;
+  height: 25px;
+  background: url(imagenes/x.png);
+  float: right;
+}
+#btnVerMasPersonajes {
+  background-color: black;
+  font-family: RickMorty1;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  width: auto;
+  height: auto;
+  border-style: groove;
+  border-width: 4px;
+  box-sizing: border-box;
+  border-color: aqua;
+  text-shadow: 3px 3px 3px blue;
+}
+#botonBuscar {
+  background-color: black;
+  font-family: RickMorty1;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  width: auto;
+  height: auto;
+  border-style: groove;
+  border-width: 4px;
+  box-sizing: border-box;
+  border-color: aqua;
+  text-shadow: 3px 3px 3px blue;
+  margin: 10px;
+}
 
+/*----------------------episodios------------------*/
+.contenedorEpisodios {
+  display: block;
+  margin: 2%;
+  align-content: center;
+}
+.episodiosJs {
+  font-family: RickMorty1;
+  font-size: 30px;
+  color: white;
+  display: block;
+  text-shadow: 3px 3px 3px blue;
+}
+#tablaInfoEpisodios {
+  text-align: left;
+  align-items: center;
+  line-height: 40px;
+  display: grid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-spacing: 10px;
+  width: fit-content;
+  height: min-content;
+}
+#infoFlotanteEpisodios {
+  display: none;
+  background-color: black;
+  border-radius: 20px;
+  padding: 25px;
+  left: 10%;
+  right: 10%;
+  position: fixed;
+  top: 25%;
+  justify-content: center;
+  text-align: center;
+  font-family: letraRick;
+  font-size: 30px;
+  color: rgb(0, 255, 26);
+  line-height: 50px;
+  letter-spacing: 5px;
+  border-radius: 5px;
+  border-style: groove;
+  border-width: 14px;
+  box-sizing: border-box;
+  border-color: aqua;
+}
+#imagenCerrarEpisodios {
+  width: 25px;
+  height: 25px;
+  float: right;
+}
+.tdPropiedadE {
+  font-size: 30px;
+  color: rgb(0, 255, 26);
+}
+.tdValorE {
+  font-family: RickMorty1;
+  font-size: 30px;
+  color: aqua;
+  text-shadow: 3px 3px 3px blue;
+}
+#contenedorTodosLosEpisodios {
+  background-color: black;
+  border-radius: 5px;
+  border-style: groove;
+  border-width: 14px;
+  box-sizing: border-box;
+  border-color: rgb(0, 255, 26);
+}
+#btnVerMasEpisodios {
+  background-color: black;
+  font-family: RickMorty1;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  width: auto;
+  height: auto;
+  border-style: groove;
+  border-width: 4px;
+  box-sizing: border-box;
+  border-color: aqua;
+  text-shadow: 3px 3px 3px blue;
+  margin: 10px;
+}
 
-
-
-
-
-
-
-
-  
+/*----------------------footer------------------*/
+footer {
+  background-color: rgba(0, 255, 26, 0.098);
+  text-align: center;
+  padding: 10px;
+  position: center;
+  display: block;
+  justify-content: space-around;
+  margin: 10px;
+}
+#textofooter {
+  font-family: letrarick;
+  font-size: 15px;
+  text-align: center;
+  margin: 10px;
+  color: white;
+  text-shadow: 3px 3px 3px rgba(0, 255, 255, 0.73);
+  align-items: center;
+}
+#img_footer {
+  width: 20px;
+  align-content: center;
+}

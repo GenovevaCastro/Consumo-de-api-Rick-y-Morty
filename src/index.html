@@ -1,61 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="icon" href="imagenes/icono .png"/>
-    <meta charset="utf-8">
-    <title>Rick y Morty</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width">
-  </head>
-  <body onclick="play()">
-    <header>
-        <h1><img src="imagenes/logo.png" id="logo"></h1>
-        <div id="caja">
-      <nav> 
+
+<head>
+  <link rel="icon" href="imagenes/icono .png" />
+  <meta charset="utf-8">
+  <title>Rick y Morty</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width">
+</head>
+
+<body onclick="play()">
+
+  <header>
+    <h1><img src="imagenes/logo.png" id="logo"></h1>
+    <div id="caja">
+      <nav>
         <ul>
-        <li><a href="index.html">
-          <img src="imagenes/boton inicio.png" id="btnInicio">
-      </a></li>
+          <li><a href="index.html">
+              <img src="imagenes/boton inicio.png" id="btnInicio">
+            </a></li>
           <li><a href="personajes.html">
-            <img src="imagenes/botonPersonajes.png" id="btnPersonajes">
-        </a></li>
-        <li><a href="episodios.html">
-          <img src="imagenes/botonEpisodios.png" id="btnEpisodios">
-      </a></li>
+              <img src="imagenes/botonPersonajes.png" id="btnPersonajes">
+            </a></li>
+          <li><a href="episodios.html">
+              <img src="imagenes/botonEpisodios.png" id="btnEpisodios">
+            </a></li>
         </ul>
       </nav>
     </div>
-    </header>
-    <main>
-      <div class="tabla">
-        <div id="parrafo">
-            <p id="sinopsis">
-            "Rick Sánchez es un ejemplo del típico "científico loco".
-            Es un genio, pero es irresponsable, alcohólico, egoísta, un poco depresivo y con poca cordura.
-            <br>
-            Junto a su Nieto Morty comienza a vivir aventuras interdimensionales, gracias a un artefacto que posee el cual les permite acceder a infinitas dimensiones."
-            </p>
-          </div>
-        <div>
-          <img src="imagenes/portal.png" id="portal">
-        </div>
+  </header>
+
+  <main>
+    <div class="tabla">
+      <div id="divImagenPortal">
+        <img src="imagenes/borracho.gif" id="portal">
       </div>
-    </main>
+      <div id="parrafo">
+        <p id="sinopsis">
+          "Rick Sánchez es un ejemplo del típico "científico loco".
+          Es un genio, pero es irresponsable, alcohólico, egoísta, un poco depresivo y con poca cordura.
+          <br>
+          Junto a su Nieto Morty comienza a vivir aventuras interdimensionales, gracias a un artefacto que posee el cual
+          les permite acceder a infinitas dimensiones."
+        </p>
+      </div>
+    </div>
+  </main>
 
-
-    <footer> <img src="imagenes/gif footer.gif" id="img_footer" /> <p id="textofooter" src> Created by Genoveva C. </p>
-    </footer>
-    <audio  id="musica">
-      <source src="soy pepinillo rick.mp3" type="audio/mpeg">
-    </audio>
-    <script>
-      function play(){
-    document.getElementById("musica").play();
+  <footer> <img src="imagenes/rick bailando.gif" id="img_footer" />
+    <p id="textofooter" src> Created by Genoveva C.</p>
+  </footer>
+  <audio id="musica">
+    <source src="soy pepinillo rick.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    function play() {
+      document.getElementById("musica").play();
     }
-    </script>
+  </script>
 
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
-

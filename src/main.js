@@ -1,7 +1,7 @@
 //aqui van los eventos del DOOM
 import { obtenerData } from './data.js';
 //aqui ya trajo la data con la funcion de data
-const resultado= obtenerData();
+const resultados= obtenerData();
 //se crea la constante de resultado donde se guarda todo lo que se obtuvo de la funcion
 //console.log(resultado);
 
@@ -12,3 +12,6 @@ const resultado= obtenerData();
 //aca va todo lo de personajes
 //aca van los episodios igual
 //llamar al contenedor de html 
+
+
+import data from './data/rickandmorty/rickandmorty.js';
