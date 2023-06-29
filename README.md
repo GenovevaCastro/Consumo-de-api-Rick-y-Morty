@@ -74,7 +74,7 @@ En este proyecto NO se usan librerías o frameworks, solo JavaScript puro tambi�
  * Paleta:  white -  aqua - black - rgb(0, 255, 26) - blue - rgba(0, 255, 26, 0.098)
 
 
-![Gráfica paleta de colores](<https://github.com/GenovevaCastro/DEV008-card-validation-veva/blob/main/src/Paleta%20de%20clores.jpg?raw=true>)
+![Gráfica paleta de colores](<https://github.com/GenovevaCastro/DEV008-data-lovers/blob/feature/iniciodata/src/paleta%20colores.jpg?raw=true>)
 
 
 * `personajes.js y personajes.html`: En estos archivos se encuentra todo lo relacionado a la data para personajes, sus funciones y el filtro de busqueda.
