@@ -1,615 +1,163 @@
-# Data Lovers
+
+# Data - Rick & Morty
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
+* [1. Objetivo del proyecto](#1-objetivo-del-proyecto)
+* [2. Resumen](#2-resumen)
+* [3. Criterios del proyecto](#3-criterios-del-proyecto)
+* [4. Consideraciones técnicas](#4-consideraciones-técnicas)
+* [5. Funcionalidad](#5-funcionalidad)
 
 ***
 
-## 1. Preámbulo
+## 1. Objetivo del proyecto
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+Este proyecto consta de página web para fans y conocedores de la serie Rick y Morty, donde mediante el consumo de la api: https://rickandmortyapi.com/
+se muestra al usuario 3 pestañas: Inicio, Personajes y Episodios, en los cuales viene información sobre la trama de la serie, los personajes que existen así como su información (nomnbre, estatus, tipo, especie, genero) y los episodios de las primeras 3 temporadas con su respectiva información (nombre y fecha de lanzamiento).
+Con esto el usuario puede acceder y buscar a los personajes de su serie favorita de manera dinamica, fácil y agradable para el fan.
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+Las APIs permiten que las aplicaciones se comuniquen y puedan aprovechar desarrollos ya construidos en lugar de tener que crearlos desde cero. 
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por las
-usuarias, al lado derecho.
+![Api]([https://github.com/GenovevaCastro/DEV008-card-validation-veva/blob/main/src/Imagen%20algoritmo.jpg?raw=true](https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_950/https://blog.finerioconnect.com/wp-content/uploads/2020/04/como-funciona-una-api.jpg))
 
-![pokemon-data-to-ui](https://user-images.githubusercontent.com/12631491/218505816-c6d11758-9de4-428f-affb-2a56ea4d68c4.png)
+## 2. Resumen
 
-## 2. Resumen del proyecto
+"Rick y Morty" es una serie de televisión estadounidense de animación para adultos creada por Justin Roiland y Dan Harmon en 2013 para Adult Swim, también se emitió en Cartoon Network. La serie sigue las desventuras de un científico, Rick Sanchez, y su fácilmente influenciable nieto, Morty, quienes pasan el tiempo entre la vida doméstica y los viajes espaciales, temporales e intergalácticos. 
+Esta página esta creada por fans y para fans de la serie, donde se realiza el consumo de apis, ya que se cuentan con 846 personajes se coloco un filtro de busqueda por palabra para ubicar al personaje con la letra nombre o palabra que lo identifique de manera más sencilla el usuario, mostrando al usuario de 20 en 20 personajes para no abrumarlo y colocando un boton de ver mas personajes conforme el quiera ir avanzando, así mismo cuenta con la funcionalidad de al dar click en cada imagen se despliega la infromación de cada uno.
+Esto mismo se repite en la pestaña de episodios el cual cuenta con las primeras 3 temporadas y 51 episodios.
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
+* Lenguajes: Javascript, HTML, CSS
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
+## 3. Criterios del proyecto
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
+**1. Una interfaz que permite al usuari@:**
 
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
+* Ver de manera dinamica la información de cada personaje y episodio.    
+* Buscar el personaje de su preferencia mediante un filtro de busqueda por palabra.
+* Interesar al usuario a descubrir más personajes y episodios mediane el boton de ver más. 
+* Darle una sorpresa al usuario al descubrir el sonido en la página de inicio.   
+* Diseño completamente enfocado en la serie amigable con el usuario fan de Rick & Morty. 
 
-Estos son datos que te proponemos:
+**2. Definición del producto.**  
 
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
+La página es de la serie de Rick & Morty.  
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
+* Por lo tanto los principales usuarios son personas mayores de 15, fans, conocedores y posibles nuevos fans.
+* El objetivo de estos usuarios es adquirir información más profunda sobre los personajes y episodios mediante una página que sea visualmente atractiva y tenga referencias de la serie. 
+* Esta página ayudará a que el usuario pueda acceder a esta información de manera fácil y rápida.
 
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. [API Rick and Morty](https://rickandmortyapi.com).
-  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
+## 3. Consideraciones técnicas
 
-* [Juegos Olímpicos de Río de Janeiro](src/data/athletes/athletes.json).
-  Este set nos proporciona la lista de los atletas que ganaron medallas en las
-  olímpiadas de Río de Janeiro.
-  - [Investigación con interesados en juegos olímpicos de Río de Janeiro](src/data/athletes/README.md)
+La lógica del proyecto esta implementada completamente en JavaScript. 
+En este proyecto NO se usan librerías o frameworks, solo JavaScript puro también conocido como Vanilla JavaScript.
+El documento ya contiene el setup y configuración necesaria para ejecutar los tests (pruebas) así como _code coverage_ para ver el nivel de cobertura de los tests usando el comando `npm
+test`.
 
-* [Studio Ghibli](src/data/ghibli/ghibli.json).
-  En este set encontrarás una lista de las animaciones y sus personajes del
-  [Studio Ghibli](https://ghiblicollection.com/).
-  - [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md)
+### Descripción de scripts / archivos
 
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
+* `src/index.html`: Este es el punto de entrada de la aplicación. Este archivo contiene el _markup_ (HTML), CSS y JavaScript.
 
-## 3. Objetivos de aprendizaje
-
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
-
-### HTML
-
-- [ ] **Uso de HTML semántico**
-
-  <details><summary>Links</summary><p>
-
-  * [HTML semántico](https://curriculum.laboratoria.la/es/topics/html/02-html5/02-semantic-html)
-  * [Semantics - MDN Web Docs Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
-
-### CSS
-
-- [ ] **Uso de selectores de CSS**
-
-  <details><summary>Links</summary><p>
-
-  * [Intro a CSS](https://curriculum.laboratoria.la/es/topics/css/01-css/01-intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
-</p></details>
-
-- [ ] **Modelo de caja (box model): borde, margen, padding**
-
-  <details><summary>Links</summary><p>
-
-  * [Box Model & Display](https://curriculum.laboratoria.la/es/topics/css/01-css/02-boxmodel-and-display)
-  * [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  * [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  * [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-</p></details>
-
-- [ ] **Uso de flexbox en CSS**
-
-  <details><summary>Links</summary><p>
-
-  * [A Complete Guide to Flexbox - CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-  * [Flexbox Froggy](https://flexboxfroggy.com/#es)
-  * [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-</p></details>
-
-### Web APIs
-
-- [ ] **Uso de selectores del DOM**
-
-  <details><summary>Links</summary><p>
-
-  * [Manipulación del DOM](https://curriculum.laboratoria.la/es/topics/browser/02-dom/03-1-dom-methods-selection)
-  * [Introducción al DOM - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Localizando elementos DOM usando selectores - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-</p></details>
-
-- [ ] **Manejo de eventos del DOM (listeners, propagación, delegación)**
-
-  <details><summary>Links</summary><p>
-
-  * [Introducción a eventos - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events)
-  * [EventTarget.addEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener)
-  * [EventTarget.removeEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/removeEventListener)
-  * [El objeto Event](https://developer.mozilla.org/es/docs/Web/API/Event)
-</p></details>
-
-- [ ] **Manipulación dinámica del DOM**
-
-  <details><summary>Links</summary><p>
-
-  * [Introducción al DOM](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Node.appendChild() - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/appendChild)
-  * [Document.createElement() - MDN](https://developer.mozilla.org/es/docs/Web/API/Document/createElement)
-  * [Document.createTextNode()](https://developer.mozilla.org/es/docs/Web/API/Document/createTextNode)
-  * [Element.innerHTML - MDN](https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML)
-  * [Node.textContent - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/textContent)
-</p></details>
-
-### JavaScript
-
-- [ ] **Diferenciar entre tipos de datos primitivos y no primitivos**
-
-- [ ] **Arrays (arreglos)**
-
-  <details><summary>Links</summary><p>
-
-  * [Arreglos](https://curriculum.laboratoria.la/es/topics/javascript/04-arrays)
-  * [Array - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/)
-  * [Array.prototype.sort() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-  * [Array.prototype.forEach() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-  * [Array.prototype.map() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-  * [Array.prototype.filter() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-  * [Array.prototype.reduce() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-</p></details>
-
-- [ ] **Objetos (key, value)**
-
-  <details><summary>Links</summary><p>
-
-  * [Objetos en JavaScript](https://curriculum.laboratoria.la/es/topics/javascript/05-objects/01-objects)
-</p></details>
-
-- [ ] **Variables (declaración, asignación, ámbito)**
-
-  <details><summary>Links</summary><p>
-
-  * [Valores, tipos de datos y operadores](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/01-values-variables-and-types)
-  * [Variables](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/02-variables)
-</p></details>
-
-- [ ] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
-
-  <details><summary>Links</summary><p>
-
-  * [Estructuras condicionales y repetitivas](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/01-conditionals-and-loops)
-  * [Tomando decisiones en tu código — condicionales - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals)
-</p></details>
-
-- [ ] **Uso de bucles/ciclos (while, for, for..of)**
-
-  <details><summary>Links</summary><p>
-
-  * [Bucles (Loops)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/02-loops)
-  * [Bucles e iteración - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration)
-</p></details>
-
-- [ ] **Funciones (params, args, return)**
-
-  <details><summary>Links</summary><p>
-
-  * [Funciones (control de flujo)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/03-functions)
-  * [Funciones clásicas](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/01-classic)
-  * [Arrow Functions](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow)
-  * [Funciones — bloques de código reutilizables - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions)
-</p></details>
-
-- [ ] **Pruebas unitarias (unit tests)**
-
-  <details><summary>Links</summary><p>
-
-  * [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
-</p></details>
-
-- [ ] **Módulos de ECMAScript (ES Modules)**
-
-  <details><summary>Links</summary><p>
-
-  * [import - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/import)
-  * [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
-</p></details>
-
-- [ ] **Uso de linter (ESLINT)**
-
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
-
-- [ ] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
-
-### Control de Versiones (Git y GitHub)
-
-- [ ] **Git: Instalación y configuración**
-
-- [ ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
-
-- [ ] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
-
-- [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
-
-- [ ] **GitHub: Despliegue con GitHub Pages**
-
-  <details><summary>Links</summary><p>
-
-  * [Sitio oficial de GitHub Pages](https://pages.github.com/)
-</p></details>
-
-- [ ] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
-
-### Centrado en el usuario
-
-- [ ] **Diseñar y desarrollar un producto o servicio poniendo a las usuarias en el centro**
-
-### Diseño de producto
-
-- [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
-
-- [ ] **Seguir los principios básicos de diseño visual**
-
-### Investigación
-
-- [ ] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
-
-  <details><summary>Links</summary><p>
-
-  * [Intro a testeos usabilidad](https://coda.io/@bootcamp-laboratoria/contenido-ux/test-de-usabilidad-15)
-  * [Pruebas con Usuarios 1 — ¿Qué, cuándo y para qué testeamos?](https://eugeniacasabona.medium.com/pruebas-con-usuarios-1-qu%C3%A9-cu%C3%A1ndo-y-para-qu%C3%A9-testeamos-7c3a89b4b5e7)
-</p></details>
-
-## 4. Consideraciones generales
-
-* Este proyecto se debe resolver en duplas.
-* El rango de tiempo estimado para completar el proyecto es de 3 a 4 Sprints.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-Los criterios para considerar que has completado este proyecto son:
-
-### Definición del producto
-
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
-
-### Historias de usuario
-
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
-
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
-
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
-
-### Diseño de la Interfaz de Usuario
-
-#### Prototipo de baja fidelidad
-
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
-
-#### Prototipo de alta fidelidad
-
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc.
-
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
-
-#### Testeos de usabilidad
-
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
-
-### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
-
-Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.
-**No** es necesario que construyas la interfaz exactamente como la diseñaste.
-Tu tiempo de hacking es escaso, así que deberás priorizar
-
-Como mínimo, tu implementación debe:
-
-1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista,
-   etc.
-2. Permitir al usuario interactuar para obtener la infomación que necesita.
-3. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
-   tamaños de pantallas: móviles, tablets y desktops.
-4. Que la interfaz siga los fundamentos de _visual design_.
-
-### Pruebas unitarias
-
-El _boilerplate_ de este proyecto no incluye Pruebas Unitarias (_tests_), así es
-que  tendrás que escribirlas tú para las funciones encargadas de  _procesar_,
-_filtrar_ y _ordenar_ la data, así como _calcular_ estadísticas.
-
-Tus _pruebas unitarias_ deben dar una cobertura del 70% de _statements_
-(_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
-(_ramas_) del archivo `src/data.js` que contenga tus funciones y está detallado
-en la sección de [Consideraciones técnicas](#srcdatajs).
-
-## 6. Hacker edition
-
-Las secciones llamadas _Hacker Edition_ son **opcionales**. Si **terminaste**
-con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás
-profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
-
-Features/características extra sugeridas:
-
-* En lugar de consumir la data estática brindada en este repositorio, puedes
-  consumir la data de forma dinámica, cargando un archivo JSON por medio de
-  `fetch`. La carpeta `src/data` contiene una versión `.js` y una `.json` de
-  de cada set datos.
-* Agregarle a tu interfaz de usuario implementada visualizaciones gráficas. Para
-  ello te recomendamos explorar librerías de gráficas como
-  [Chart.js](https://www.chartjs.org/)
-  o [Google Charts](https://developers.google.com/chart/).
-* 100% Coverage
-
-## 7. Consideraciones técnicas
-
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6), HTML y CSS. En este proyecto NO está permitido usar librerías o
-frameworks, solo [vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e),
-con la excepción de librerías para hacer gráficas (charts); ver
-[_Parte opcional_](#6-hacker-edition) más arriba.
-
-El _boilerplate_ contiene una estructura de archivos como punto de partida así
-como toda la configuración de dependencias:
-
-```text
-.
-├── EXTRA.md
-├── README.md
-├── package.json
-├── src
-|  ├── data (según con qué data trabajes)
-|  |  ├── lol
-|  |  |  ├── lol.js
-|  |  |  ├── lol.json
-|  |  |  └── README.md
-|  |  ├── pokemon
-|  |  |  ├── pokemon.js
-|  |  |  ├── pokemon.json
-|  |  |  └── README.md
-|  |  └── rickandmorty
-|  |  |  ├── rickandmorty.js
-|  |  |  ├── rickandmorty.json
-|  |  |  └── README.md
-|  |  └── athletes
-|  |  |  ├── athletes.js
-|  |  |  ├── athletes.json
-|  |  |  └── README.md
-|  |  └── ghibli
-|  |  |  ├── ghibli.js
-|  |  |  ├── ghibli.json
-|  |  |  └── README.md
-|  ├── data.js
-|  ├── index.html
-|  ├── main.js
-|  └── style.css
-└── test
-   └── data.spec.js
-
-directory: 7 file: 20
-```
-
-### `src/index.html`
-
-Como en el proyecto anterior, existe un archivo `index.html`. Como ya sabes,
-acá va la página que se mostrará al usuario. También nos sirve para indicar
-qué scripts se usarán y unir todo lo que hemos hecho.
-
-### `src/main.js`
-
-Recomendamos usar `src/main.js` para todo tu código que tenga que ver con
-mostrar los datos en la pantalla. Con esto nos referimos básicamente a la
-interacción con el DOM. Operaciones como creación de nodos, registro de
-manejadores de eventos (_event listeners_ o _event handlers_), ....
-
-Esta no es la única forma de dividir tu código, puedes usar más archivos y
-carpetas, siempre y cuando la estructura sea clara para tus compañeras.
-
-En este archivo encontrarás una serie de _imports_ _comentados_. Para _cargar_
-las diferentes fuentes de datos tendrás que _descomentar_ la línea
-correspondiente.
-
-Por ejemplo, si "descomentamos" la siguiente línea:
+* `src/style.css`: Este archivo contiene las reglas de estilo utilizadas para este proyecto.
 
 ```js
-// import data from './data/lol/lol.js';
-```
+ * Alineación: al centro.
+ * Tipografías: fantasy  &  geneva.
+ * Fondo: de identidad corporativa de la empresa "Impresión y diseño Veva".
+ * Imagen: representativa de los productos seleccionados al carrito de compras.
+ * Opacidades: rgba(0, 0, 0, 0.359).
+ * Paleta: rgb(0, 0, 0) - rgb(64, 44, 25) - rgb(142, 108, 58) - rgb(126, 93, 48) - rgb(255, 255, 255) - rgb(194, 12, 14)
+ ```
 
-La línea quedaría así:
+![Gráfica paleta de colores](<https://github.com/GenovevaCastro/DEV008-card-validation-veva/blob/main/src/Paleta%20de%20clores.jpg?raw=true>)
 
-```js
-import data from './data/lol/lol.js';
-```
+* `src/validator.js`: En este archivo se implementa el objeto `validator`, el cual ya está _exportado_ en el _boilerplate_. 
+Este objeto (`validator`) conitiene dos métodos:
+  - `validator.isValid(tarjeta)`: `tarjeta` es un `string`
+     con el número de tarjeta que se va a verificar. Esta función retorna
+     un `boolean` dependiendo si la tarjeta es válida de acuerdo al [algoritmo de Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn).
 
-Y ahora tendríamos la variable `data` disponible en el script `src/main.js`.
+  - `validator.maskify(tarjeta)`: `tarjeta` es un `string` con
+    el número de tarjeta y esta función retorna un `string` donde todos menos
+    los últimos cuatro caracteres son reemplazados por (`#`).
+    Esta función siempre mantiene los últimos cuatro caracteres
+    intactos, aún cuando el `string` sea de menor longitud.
+    Simplemente enmascara el número de tarjeta, ejemplo:
 
-### `src/data.js`
+    ```js
+    maskify('4556364607935616') === '############5616'
+    
+    ```
 
-El corazón de este proyecto es la manipulación de datos a través de arreglos
-y objetos.
+* `src/index.js`: En este archivo se escuchan los eventos del DOM, invocando al
+  `validator.isValid()` y `validator.maskify()` según sea necesario y se
+  actualiza el resultado en la UI (interfaz de usuario).
 
-Te recomendamos que este archivo contenga toda la funcionalidad que corresponda
-a obtener, procesar y manipular datos (tus funciones). Por ejemplo:
+* `test/validator.spec.js`: Este archivo contiene algunos tests de ejemplo para
+  implementar los tests para `validator.isValid()` y `validator.maskify()`.
 
-* `filterData(data, condition)`: esta función `filter` o filtrar recibiría la
-  data, y nos retornaría aquellos datos que sí cumplan con la condición.
+El _boilerplate_ incluye tareas que ejecutan [eslint](https://eslint.org/) y
+[htmlhint](https://github.com/yaniswang/HTMLHint) para verificar el `HTML` y
+`JavaScript` con respecto a una guías de estilos. Ambas tareas se ejecutan
+automáticamente antes de ejecutar las pruebas (tests) cuando usamos el comando
+`npm run test`. En el caso de `JavaScript` estamos usando un archivo de
+configuración de `eslint` que se llama `.eslintrc` que contiene un mínimo de
+información sobre el parser que usar (qué version de JavaScript/ECMAScript), el entorno (browser en este caso) y las [reglas recomendadas (`"eslint:recommended"`)](https://eslint.org/docs/rules/).
+En cuanto a reglas/guías de estilo en sí, se usan las recomendaciones _por defecto_ de tanto `eslint` como `htmlhint`.
 
-* `sortData(data, sortBy, sortOrder)`: esta función `sort` u ordenar
-  recibe tres parámetros.
-  El primer parámetro, `data`, nos entrega los datos.
-  El segundo parámetro, `sortBy`, nos dice con respecto a cuál de los campos de
-  la data se quiere ordenar.
-  El tercer parámetro, `sortOrder`, indica si se quiere ordenar de manera
-  ascendente o descendente.
+***
 
-* `computeStats(data)`: la función `compute` o calcular, nos permitirá hacer
-  cálculos estadísticos básicos para ser mostrados de acuerdo a la data
-  proporcionada.
+## 5. Funcionalidad
 
-Estos nombres de funciones y de parámetros son solamente referenciales, lo que
-decidas depende de tu propia implementación.
+**Descripción validator.js:**
 
-Estas funciones deben ser [_puras_](https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d)
-e independientes del DOM. Estas funciones serán después usadas desde el archivo
-`src/main.js`, al cargar la página, y cada vez que el usuario interactúe (click,
-filtrado, ordenado, ...).
+* Function voltearTarjeta(tarjeta): 
 
-### `src/data`
+Esta función se encarga de voltear los numeros de la tarjeta que el usuario ingresa la cuál retorna en tarjetaInvertida.
 
-En esta carpeta están los datos de las diferentes fuentes. Encontrarás una
-carpeta por cada fuente, y dentro de cada carpeta dos archivos: uno con la
-extensión `.js` y otro `.json`. Ambos archivos contienen la misma data; la
-diferencia es que el `.js` lo usaremos a través de una etiqueta `<script>`,
-mientras que el `.json` está ahí para opcionalmente cargar la data de forma
-asíncrona con [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
-(ver sección de [_Parte Opcional_](#6-hacker-edition)).
+* Function doblarCadaSegundoDigito(tarjetaInvertida): 
 
-### `test/data.spec.js`
+Esta función multiplicara por 2 cada segundo digito de la tarjetaInvertida y la retornara en un arrayConNumerosYaMultiplicados.
 
-Tendrás también que completar las pruebas unitarias de las funciones
-implementadas en el archivo `data.js`.
+* Function sumaDeDigitosMayoresDeDiez(arrayConNumerosYaMultiplicados):
 
-## 8. Pistas, tips y lecturas complementarias
+En esta función inicializamos un arrayTarjetaConSumaDeNumerosMayoresDeDiez, en la cual  realizamos un foreach en el arrayConNumerosYaMultiplicados, de cada elemento hacemos la   condicional de si el elemento es mayor a 9: 
+Hacemos un nuevo array que es igual a elementoArray el cual es igual a el elemento convertido a un string y hacemos una division de este. Se crea una constante donde se guardara el resultado de las suma de los digitos del elemento mayor a 9.
+Esta constante resultadoDeSuma sera = a la funcion sumaElementosDelArray del (elementoArray) y coloca el resultadoDeSuma en la ultima posición del arrayTarjetaConSumaDeNumerosMayoresDeDiez, de lo contrario si no es mayor a 10 coloca el elemento en la ultima posición del arrayTarjetaConSumaDeNumerosMayoresDeDiez. Y retorna a arrayTarjetaConSumaDeNumerosMayoresDeDiez.
 
-### Primeros pasos
+* Function sumaElementosDelArray(arrayDeNumeros):
 
-Antes de empezar a escribir código, debes definir qué deberá hacer el producto
-en base al conocimiento que puedas obtener de tu usuario. Estas preguntas te
-pueden ayudar:
+Esta función se encarga de sumasr los digitos del elemento mayor a 9, esta funcion se utiliza en la funcion de sumaDeDigitosmayoresDeDiez, cuando se manda a llamar esta función tiene una variable llamada sumaDeDigitos la cual de inicio vale 0, pero despues del arrayDeNumeros realizamos un foreach de los digitos del elemento y tenemos que entonces sumaDeDigitos = sumaDeDigitos + parseInt(digito); 
+Por ejemplo: si el elemento mayor a 9 es 13, se hace el for each del primer digito que es 1, asi que sumaDeDigitos = sumaDeDigitos + parseInt(1), entonces suma de digitos + 1 es + a 1 y lo returna a suma de digitos, por tanto ahora sumaDeDigitos = 1.
+Se realiza el for each del segundo digito que es 3, asi que sumaDeDigitos = sumaDeDigitos + parseInt(3), entonces suma de digitos que ahora vale 1 + 3 = 4 y lo returna a suma de digitos, por tanto ahora sumaDeDigitos = 4.
+y hace esta funcion en cada elemento mayor a 9 retornando estos a suma de digitos. 
+ 
+* Function verificarSiEsMultiploDeDiez(numeroQueVerificara):
 
-* ¿Quiénes son los principales usuarios de producto?
-* ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
-* ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
-* ¿Cuándo utilizan o utilizarían el producto?
-* Toda tu investigación previa debe tener como resultado todas las Historias
-  de Usuario de tu proyecto.
-* No hagas los prototipos de alta fidelidad de todas tus Historias. Comienza
-  solamente por los que se necesiten para tu Sprint 1 (semana 1 de trabajo). Más
-  pistas en la guía de organización para el proyecto.
+En la cual siel númeroQueVerificara % 10 es = a 0 retornara un true, de lo contrario un false. 
 
-Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
+* Function mascara(tarjeta):
 
-1. Una de las integrantes del equipo debe realizar un :fork_and_knife:
-   [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-   tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
-   en ese repo. La otra integrante del equipo deber hacer un fork **del
-   repositorio de su compañera** y
-   [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
-   hacia el mismo.
-2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   tu _fork_ a tu computadora (copia local).
-3. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
-   asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
-4. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
-   pruebas unitarias (unit tests) con el comando `npm test`.
-5. Para ver la interfaz de tu programa en el navegador, usa el comando
-  `npm start` para arrancar el servidor web y dirígete a
-  `http://localhost:5000` en tu navegador.
-6. A codear se ha dicho! :rocket:
+Retornara la tarjeta remplazando todos los elementos por un # menos los ultimos 4.
 
-### Contenido de referencia
+* isValid(tarjeta): 
 
-#### Diseño de experiencia de usuario (User Experience Design)
+Por ultimo retornamos verificarSiEsMultiploDeDiez(
+      sumaElementosDelArray(
+        sumaDeDigitosMayoresDeDiez(
+          doblarCadaSegundoDigito(
+            voltearTarjeta(tarjeta))))) todas las funciones en una.
 
-* Investigación con usuarios / entrevistas
-* Principios de diseño visual
+  Así mismo en maskify(tarjeta) retornamos la funcion mascara(tarjeta) para que se ejecute todo esto en la validacion de la tarjeta.
 
-#### Desarrollo Front-end
+  **Descripción index.js:**
 
-* Unidad de testing en curso de JavaScript en LMS.
-* Unidad de arreglos en curso de JavaScript en LMS.
-* Unidad de objetos en curso de JavaScript en LMS.
-* Unidad de funciones en curso de JavaScript en LMS.
-* Unidad de DOM en curso de Browser JavaScript en LMS.
-* [Array en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array)
-* [Array.sort en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort)
-* [Array.map en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
-* [Array.filter en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
-* [Array.reduce en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
-* [Array.forEach en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
-* [Object.keys en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys)
-* [Object.entries en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries)
-* [Fetch API en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [json.org](https://json.org/json-es.html)
-* [expressions-vs-statements](https://2ality.com/2012/09/expressions-vs-statements.html)
-* [expresión vs sentencia](https://openclassrooms.com/en/courses/4309531-descubre-las-funciones-en-javascript/5108986-diferencia-entre-expresion-y-sentencia)
-* [datos atómicos vs datos estructurados](https://www.todojs.com/tipos-datos-javascript-es6/)
-* [Modulos: Export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)
-* [Modulos: Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
+* Function mostrarAlerta(validacion):
 
-#### Herramientas
+Si validación es true manda una alerta con Tarjeta vlida, si es false manda alerta de tarjeta invalida.
+Esta funcion de mostrar alerta es llamada en la parte superior del archivo como: mostrarAlerta(validator.isValid(tarjeta)); es decir, mostrar alerta del validator, en isValid de la tarjeta, en el cual retorna un true o false que activa las alertas. 
+Así mismo document.getElementById("tarjeta").value = validator.maskify(tarjeta) que es donde se manda a llamar la función que enmascara la tarjeta.
 
-* [Git](https://git-scm.com/)
-* [GitHub](https://github.com/)
-* [GitHub Pages](https://pages.github.com/)
-* [Node.js](https://nodejs.org/)
-* [Jest](https://jestjs.io/)
+Todo esto sucede al ingresar el usuario sus datos y dar click en el boton. 
 
-#### Organización del Trabajo
-
-* [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s)
-* [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
-* [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
-
-## 9. Checklist
-
-* [ ] Usa VanillaJS.
-* [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
-  lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
-  `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
-  en `README.md`.
-* [ ] Incluye link a Zeplin en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
-  usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
+***
