@@ -19,7 +19,7 @@ Con esto el usuario puede acceder y buscar a los personajes de su serie favorita
 
 Las APIs permiten que las aplicaciones se comuniquen y puedan aprovechar desarrollos ya construidos en lugar de tener que crearlos desde cero. 
 
-![Api]([[src/api.jpg](https://github.com/GenovevaCastro/DEV008-data-lovers/blob/feature/iniciodata/src/api.jpg?raw=true)))
+![Api]([(https://github.com/GenovevaCastro/DEV008-data-lovers/blob/feature/iniciodata/src/api.jpg?raw=true))
 
 ## 2. Resumen
 
@@ -57,9 +57,9 @@ En este proyecto NO se usan librerías o frameworks, solo JavaScript puro tambi�
 
 * Prototipo de baja fidelidad: La aplicación web se basa en el desplazamiento de la información que contendrá esta misma, además de los elementos que la componen.
 
+![Prototipo de baja]([(https://raw.githubusercontent.com/GenovevaCastro/DEV008-data-lovers/b70d83f957dcb8e0957787c8f7e069a55a783651/src/prototipobaja.jpeg))
 
-
-
+* Prototipo de alta fidelidad:
 
 ### Descripción de archivos
 
