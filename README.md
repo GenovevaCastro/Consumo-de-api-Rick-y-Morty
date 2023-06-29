@@ -19,7 +19,7 @@ Con esto el usuario puede acceder y buscar a los personajes de su serie favorita
 
 Las APIs permiten que las aplicaciones se comuniquen y puedan aprovechar desarrollos ya construidos en lugar de tener que crearlos desde cero. 
 
-![Api]([https://github.com/GenovevaCastro/DEV008-card-validation-veva/blob/main/src/Imagen%20algoritmo.jpg?raw=true](https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_950/https://blog.finerioconnect.com/wp-content/uploads/2020/04/como-funciona-una-api.jpg))
+![Api]([[src/api.jpg](https://github.com/GenovevaCastro/DEV008-data-lovers/blob/feature/iniciodata/src/api.jpg?raw=true)))
 
 ## 2. Resumen
 
@@ -33,11 +33,12 @@ Esto mismo se repite en la pestaña de episodios el cual cuenta con las primeras
 
 **1. Una interfaz que permite al usuari@:**
 
-* Ver de manera dinamica la información de cada personaje y episodio.    
+* Ver de manera dinamica la data de cada personaje y episodio.    
 * Buscar el personaje de su preferencia mediante un filtro de busqueda por palabra.
 * Interesar al usuario a descubrir más personajes y episodios mediane el boton de ver más. 
-* Darle una sorpresa al usuario al descubrir el sonido en la página de inicio.   
-* Diseño completamente enfocado en la serie amigable con el usuario fan de Rick & Morty. 
+* Darle una sorpresa al usuario al descubrir el sonido en la página de inicio.
+* Página responsiva.
+* Diseño completamente enfocado en la serie amigable con el usuario fan de Rick & Morty
 
 **2. Definición del producto.**  
 
@@ -51,22 +52,19 @@ La página es de la serie de Rick & Morty.
 
 La lógica del proyecto esta implementada completamente en JavaScript. 
 En este proyecto NO se usan librerías o frameworks, solo JavaScript puro también conocido como Vanilla JavaScript.
-El documento ya contiene el setup y configuración necesaria para ejecutar los tests (pruebas) así como _code coverage_ para ver el nivel de cobertura de los tests usando el comando `npm
-test`.
 
-### Descripción de scripts / archivos
+### Descripción de archivos
 
-* `src/index.html`: Este es el punto de entrada de la aplicación. Este archivo contiene el _markup_ (HTML), CSS y JavaScript.
+* `index.html, personajes.html, episodios.html`: Este es el punto de entrada de la aplicación. Estos archivos contienen el _markup_ (HTML), CSS y JavaScript.
 
 * `src/style.css`: Este archivo contiene las reglas de estilo utilizadas para este proyecto.
 
-```js
- * Alineación: al centro.
- * Tipografías: fantasy  &  geneva.
- * Fondo: de identidad corporativa de la empresa "Impresión y diseño Veva".
- * Imagen: representativa de los productos seleccionados al carrito de compras.
- * Opacidades: rgba(0, 0, 0, 0.359).
- * Paleta: rgb(0, 0, 0) - rgb(64, 44, 25) - rgb(142, 108, 58) - rgb(126, 93, 48) - rgb(255, 255, 255) - rgb(194, 12, 14)
+* `personajes.js, episodios.js`:
+ * Alineación: al centro y justificada.
+ * Tipografías: letrarick.ttf y letraSinopsis.ttf
+ * Fondo: Negro.
+ * Opacidades: 3px 3px 3px rgba(0, 255, 255, 0.73);  rgba(0, 255, 26, 0.098)
+ * Paleta:  white -  aqua - black - rgb(0, 255, 26) - blue - rgba(0, 255, 26, 0.098)
  ```
 
 ![Gráfica paleta de colores](<https://github.com/GenovevaCastro/DEV008-card-validation-veva/blob/main/src/Paleta%20de%20clores.jpg?raw=true>)
