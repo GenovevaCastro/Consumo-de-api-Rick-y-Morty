@@ -60,6 +60,10 @@ En este proyecto NO se usan librerías o frameworks, solo JavaScript puro tambi�
 ![prototipo baja](<https://github.com/GenovevaCastro/DEV008-data-lovers/blob/feature/iniciodata/src/prototipobaja.jpeg?raw=true>)
 
 * Prototipo de alta fidelidad:
+  
+  ![prototipo baja1](<https://github.com/GenovevaCastro/DEV008-data-lovers/blob/feature/iniciodata/src/1.jpg?raw=true>)
+  ![prototipo baja2](<https://github.com/GenovevaCastro/DEV008-data-lovers/blob/feature/iniciodata/src/2.jpg?raw=true>)
+  ![prototipo baja2](<https://github.com/GenovevaCastro/DEV008-data-lovers/blob/feature/iniciodata/src/3.jpg?raw=true>)
 
 ### Descripción de archivos
 
