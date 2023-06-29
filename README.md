@@ -19,7 +19,7 @@ Con esto el usuario puede acceder y buscar a los personajes de su serie favorita
 
 Las APIs permiten que las aplicaciones se comuniquen y puedan aprovechar desarrollos ya construidos en lugar de tener que crearlos desde cero. 
 
-![Api]([(<https://github.com/GenovevaCastro/DEV008-data-lovers/blob/feature/iniciodata/src/api.jpg?raw=true>))
+![Api][(<https://github.com/GenovevaCastro/DEV008-data-lovers/blob/feature/iniciodata/src/api.jpg?raw=true>)
 
 ## 2. Resumen
 
