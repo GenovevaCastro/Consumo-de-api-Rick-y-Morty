@@ -7,7 +7,7 @@
 * [2. Resumen](#2-resumen)
 * [3. Criterios del proyecto](#3-criterios-del-proyecto)
 * [4. Consideraciones técnicas](#4-consideraciones-técnicas)
-* [5. Funcionalidad](#5-funcionalidad)
+* [5. Diseño de la interfaz del usuario](#5-diseño-de-la-interfaz-del-usuario)
 
 ***
 
@@ -48,12 +48,12 @@ La página es de la serie de Rick & Morty.
 * El objetivo de estos usuarios es adquirir información más profunda sobre los personajes y episodios mediante una página que sea visualmente atractiva y tenga referencias de la serie. 
 * Esta página ayudará a que el usuario pueda acceder a esta información de manera fácil y rápida.
 
-## 3. Consideraciones técnicas
+## 4. Consideraciones técnicas
 
 La lógica del proyecto esta implementada completamente en JavaScript. 
 En este proyecto NO se usan librerías o frameworks, solo JavaScript puro también conocido como Vanilla JavaScript.
 
-### Diseño de la interfaz del usuario
+## 5. Diseño de la interfaz del usuario
 
 * Prototipo de baja fidelidad: La aplicación web se basa en el desplazamiento de la información que contendrá esta misma, además de los elementos que la componen.
 
@@ -67,7 +67,7 @@ En este proyecto NO se usan librerías o frameworks, solo JavaScript puro tambi�
 
 ### Descripción de archivos
 
-* `index.html: Este es el punto de entrada de la aplicación. Estos archivos contienen el _markup_ (HTML), CSS y JavaScript.
+* `index.html`: Este es el punto de entrada de la aplicación. Estos archivos contienen el _markup_ (HTML), CSS y JavaScript.
 
 * `src/style.css`: Este archivo contiene las reglas de estilo utilizadas para este proyecto.
 
