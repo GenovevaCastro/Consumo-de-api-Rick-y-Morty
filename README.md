@@ -21,6 +21,8 @@ Las APIs permiten que las aplicaciones se comuniquen y puedan aprovechar desarro
 
 ![Api][(<https://github.com/GenovevaCastro/DEV008-data-lovers/blob/feature/iniciodata/src/api.jpg?raw=true>)
 
+![Gráfica paleta de colores](<https://github.com/GenovevaCastro/DEV008-data-lovers/blob/feature/iniciodata/src/api.jpg?raw=true>)
+
 ## 2. Resumen
 
 "Rick y Morty" es una serie de televisión estadounidense de animación para adultos creada por Justin Roiland y Dan Harmon en 2013 para Adult Swim, también se emitió en Cartoon Network. La serie sigue las desventuras de un científico, Rick Sanchez, y su fácilmente influenciable nieto, Morty, quienes pasan el tiempo entre la vida doméstica y los viajes espaciales, temporales e intergalácticos. 
