@@ -10,7 +10,7 @@ a:hover {
 body {
   justify-content: center;
   text-align: center;
-  background: black;
+  background-image: url(imagenes/fondopepinillos.png);
   background-repeat: no-repeat;
   padding: 10px;
   background-size: cover;
@@ -19,16 +19,16 @@ body {
 #bodyPersonajes {
   justify-content: center;
   text-align: center;
-  background: black;
+  background-image: url(imagenes/fondopepinillos.png);
   background-repeat: repeat-y;
-  background-size: contain;
+  background-size: 100%;
   overflow-x: hidden;
 }
 #bodyEpisodios {
+  background-image: url(imagenes/fondopepinillos.png);
   justify-content: center;
   text-align: center;
-  background: black;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: 100%;
   overflow-x: hidden;
 }
@@ -36,7 +36,7 @@ header {
   padding: 20px;
 }
 #logo {
-  width: 50%;
+  width: 40%;
   margin: 10px;
 }
 @font-face {
@@ -47,6 +47,11 @@ header {
   font-family: letrarick;
   src: url(letrarick.ttf);
 }
+@font-face {
+  font-family: letraextra;
+  src: url(letraextras.ttf);
+}
+
 
 /*------------------navegador-------------*/
 nav li {
@@ -86,34 +91,29 @@ main {
   margin: 10px;
 }
 #portal {
-  width: 50%;
+  width: 40%;
   height: auto;
   text-align: center;
   position: center;
   display: block;
   justify-content: space-around;
-  border-radius: 10px;
-  border-color: aqua;
-  border-style: groove;
-  border-width: 10px;
 }
 #sinopsis {
   font-size: 27px;
-  color: white;
+  color: #5EBDD3;
   text-align: center;
   font-family: RickMorty1;
   height: auto;
   width: 100%;
   align-items: center;
-  margin: 5px;
+  margin-block: 20px;
   background-color: black;
   border-radius: 5px;
   border-style: groove;
-  border-width: 10px;
+  border-width: 5px;
   box-sizing: border-box;
   border-color: rgb(0, 255, 26);
-  line-height: 35px;
-  text-shadow: 3px 3px 3px blue;
+  line-height: 40px;
   word-spacing: 5px;
 }
 /*----------------------personajes------------------*/
@@ -128,7 +128,7 @@ main {
   margin: 20px;
   border-radius: 5px;
   border-style: groove;
-  border-width: 14px;
+  border-width: 5px;
   box-sizing: border-box;
   border-color: rgb(0, 255, 26);
   /*este display sirvio para centrar el cuadro i la info de dentro*/
@@ -136,7 +136,7 @@ main {
   align-items: center;
 }
 .imagenPersonajeJs {
-  width: 180px;
+  width: 190px;
   border-radius: 200px;
   box-shadow: 0 0 4rem rgb(0, 255, 255);
   align-content: center;
@@ -248,9 +248,9 @@ main {
 .episodiosJs {
   font-family: RickMorty1;
   font-size: 30px;
-  color: white;
+  color: #5EBDD3;
   display: block;
-  text-shadow: 3px 3px 3px blue;
+  
 }
 #tablaInfoEpisodios {
   text-align: left;
@@ -304,7 +304,7 @@ main {
   background-color: black;
   border-radius: 5px;
   border-style: groove;
-  border-width: 14px;
+  border-width: 5px;
   box-sizing: border-box;
   border-color: rgb(0, 255, 26);
 }
@@ -324,6 +324,17 @@ main {
   margin: 10px;
 }
 
+#divSillon{
+  width: 100%;
+  height: auto;
+}
+
+#sillon{
+  width: 50%;
+  height: auto;
+
+}
+
 /*----------------------footer------------------*/
 footer {
   background-color: rgba(0, 255, 26, 0.098);
@@ -331,12 +342,13 @@ footer {
   padding: 10px;
   position: center;
   display: block;
+  letter-spacing: 6px;
   justify-content: space-around;
   margin: 10px;
 }
 #textofooter {
   font-family: letrarick;
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
   margin: 10px;
   color: white;
