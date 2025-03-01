@@ -37,7 +37,6 @@ header {
 }
 #logo {
   width: 40%;
-  margin: 10px;
 }
 @font-face {
   font-family: RickMorty1;
@@ -50,6 +49,14 @@ header {
 @font-face {
   font-family: letraextra;
   src: url(letraextras.ttf);
+}
+@font-face {
+  font-family: letraTres;
+  src: url(letraTres.ttf);
+}
+@font-face {
+  font-family: letraCuatro;
+  src: url(letraCuatro.ttf);
 }
 
 
@@ -88,10 +95,9 @@ main {
   position: center;
   display: flex;
   justify-content: space-around;
-  margin: 10px;
 }
 #portal {
-  width: 40%;
+  width: 25%;
   height: auto;
   text-align: center;
   position: center;
@@ -99,20 +105,16 @@ main {
   justify-content: space-around;
 }
 #sinopsis {
-  font-size: 27px;
-  color: #5EBDD3;
-  text-align: center;
   font-family: RickMorty1;
+  font-size: 30px;
+  color: aqua;
+  text-shadow: 3px 3px 3px blue;
+  text-align: center;
   height: auto;
   width: 100%;
   align-items: center;
   margin-block: 20px;
-  background-color: black;
-  border-radius: 5px;
-  border-style: groove;
-  border-width: 5px;
-  box-sizing: border-box;
-  border-color: rgb(0, 255, 26);
+  background-color: rgba(0, 0, 0, 0.461);
   line-height: 40px;
   word-spacing: 5px;
 }
@@ -332,14 +334,13 @@ main {
 #sillon{
   width: 50%;
   height: auto;
-
-}
+} 
 
 /*----------------------footer------------------*/
 footer {
-  background-color: rgba(0, 255, 26, 0.098);
+  background-color: rgba(0, 255, 255, 0.131);
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   position: center;
   display: block;
   letter-spacing: 6px;
