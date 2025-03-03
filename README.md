@@ -74,10 +74,9 @@ En este proyecto NO se usan librerías o frameworks, solo JavaScript puro tambi�
 * `src/style.css`: Este archivo contiene las reglas de estilo utilizadas para este proyecto.
 
  * Alineación: al centro y justificada.
- * Tipografías: letrarick.ttf y letraSinopsis.ttf - OCR A Extended  - Get Schwifty Regular
  * Fondo: Negro.
  * Opacidades: 3px 3px 3px rgba(0, 255, 255, 0.73);  rgba(0, 255, 26, 0.098)
- * Paleta:  white -  aqua - black - rgb(0, 255, 26) - blue - rgba(0, 255, 26, 0.098)
+ * Paleta:  white, aqua , black - verde rgb(0, 255, 26) , blue .
 
 
 ![Gráfica paleta de colores](<https://github.com/GenovevaCastro/DEV008-data-lovers/blob/feature/iniciodata/src/paleta%20colores.jpg?raw=true>)
