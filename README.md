@@ -78,10 +78,6 @@ En este proyecto NO se usan librerías o frameworks, solo JavaScript puro tambi�
  * Opacidades: 3px 3px 3px rgba(0, 255, 255, 0.73);  rgba(0, 255, 26, 0.098)
  * Paleta:  white, aqua , black - verde rgb(0, 255, 26) , blue .
 
-
-![Gráfica paleta de colores](<https://github.com/GenovevaCastro/DEV008-data-lovers/blob/feature/iniciodata/src/paleta%20colores.jpg?raw=true>)
-
-
 * `personajes.js y personajes.html`: En estos archivos se encuentra todo lo relacionado a la data para personajes, sus funciones y el filtro de busqueda.
 
 * `episodios.js y episodios.html`:En estos archivos se encuentra todo lo relacionado a la data para personajes, sus funciones.
